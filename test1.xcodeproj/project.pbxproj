@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEC134401853B29300E2D4CD /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC1343F1853B29300E2D4CD /* next.png */; };
+		CEC134421853B3E300E2D4CD /* back1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC134411853B3E300E2D4CD /* back1.png */; };
 		CEE6A7F11850066700B7B177 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE6A7F01850066700B7B177 /* Foundation.framework */; };
 		CEE6A7F31850066700B7B177 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE6A7F21850066700B7B177 /* CoreGraphics.framework */; };
 		CEE6A7F51850066700B7B177 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE6A7F41850066700B7B177 /* UIKit.framework */; };
@@ -217,8 +219,6 @@
 		CEE6A9C11850090900B7B177 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE6A9C01850090900B7B177 /* SystemConfiguration.framework */; };
 		CEE6A9C318500B6F00B7B177 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE6A9C218500B6F00B7B177 /* GoogleMaps.framework */; };
 		CEE6A9C518500B8000B7B177 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEE6A9C418500B8000B7B177 /* GoogleMaps.bundle */; };
-		CEE6A9C718500BD100B7B177 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE6A9C618500BD100B7B177 /* next.png */; };
-		CEE6A9C918500BE800B7B177 /* back1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE6A9C818500BE800B7B177 /* back1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,6 +232,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CEC1343F1853B29300E2D4CD /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		CEC134411853B3E300E2D4CD /* back1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back1.png; sourceTree = "<group>"; };
 		CEE6A7ED1850066700B7B177 /* test1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE6A7F01850066700B7B177 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CEE6A7F21850066700B7B177 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -468,8 +470,6 @@
 		CEE6A9C01850090900B7B177 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CEE6A9C218500B6F00B7B177 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "../CPSC/GoogleMaps-iOS-1.5.0/GoogleMaps.framework"; sourceTree = SOURCE_ROOT; };
 		CEE6A9C418500B8000B7B177 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "../CPSC/GoogleMaps-iOS-1.5.0/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"; sourceTree = SOURCE_ROOT; };
-		CEE6A9C618500BD100B7B177 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = next.png; path = ../../next.png; sourceTree = "<group>"; };
-		CEE6A9C818500BE800B7B177 /* back1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back1.png; path = ../../back1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -612,8 +612,8 @@
 		CEE6A7F71850066700B7B177 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CEE6A9C818500BE800B7B177 /* back1.png */,
-				CEE6A9C618500BD100B7B177 /* next.png */,
+				CEC134411853B3E300E2D4CD /* back1.png */,
+				CEC1343F1853B29300E2D4CD /* next.png */,
 				CEE6A92F1850074700B7B177 /* apple-touch-icon-80x80-precomposed.png */,
 				CEE6A9301850074700B7B177 /* apple-touch-icon-120x120-precomposed.png */,
 				CEE6A9311850074700B7B177 /* back.png */,
@@ -940,7 +940,6 @@
 				CEE6A8BB1850070A00B7B177 /* IMG_0713.left.jpg in Resources */,
 				CEE6A8E11850070A00B7B177 /* IMG_0719.top.jpg in Resources */,
 				CEE6A94E1850074700B7B177 /* bot.png in Resources */,
-				CEE6A9C718500BD100B7B177 /* next.png in Resources */,
 				CEE6A92E1850070A00B7B177 /* TowerHousepano_u.jpg in Resources */,
 				CEE6A9281850070A00B7B177 /* panophoto.right.jpg in Resources */,
 				CEE6A8FE1850070A00B7B177 /* IMG_0730.right.jpg in Resources */,
@@ -1007,8 +1006,8 @@
 				CEE6A8C71850070A00B7B177 /* IMG_0715.left.jpg in Resources */,
 				CEE6A91C1850070A00B7B177 /* IMG_0744.right.jpg in Resources */,
 				CEE6A8CF1850070A00B7B177 /* IMG_0716.top.jpg in Resources */,
-				CEE6A9C918500BE800B7B177 /* back1.png in Resources */,
 				CEE6A8BA1850070A00B7B177 /* IMG_0713.front.jpg in Resources */,
+				CEC134421853B3E300E2D4CD /* back1.png in Resources */,
 				CEE6A9121850070A00B7B177 /* IMG_0742.back.jpg in Resources */,
 				CEE6A9621850074700B7B177 /* Splash screen base 1136.png in Resources */,
 				CEE6A95F1850074700B7B177 /* settingsBot.png in Resources */,
@@ -1020,6 +1019,7 @@
 				CEE6A8CE1850070A00B7B177 /* IMG_0716.right.jpg in Resources */,
 				CEE6A8CD1850070A00B7B177 /* IMG_0716.left.jpg in Resources */,
 				CEE6A8C31850070A00B7B177 /* IMG_0714.top.jpg in Resources */,
+				CEC134401853B29300E2D4CD /* next.png in Resources */,
 				CEE6A8EB1850070A00B7B177 /* IMG_0721.left.jpg in Resources */,
 				CEE6A9221850070A00B7B177 /* IMG_0750.right.jpg in Resources */,
 				CEE6A8AA1850070A00B7B177 /* Black map.jpg in Resources */,

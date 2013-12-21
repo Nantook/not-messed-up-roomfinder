@@ -19,12 +19,12 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
 - (IBAction)toggleAccel:(id)sender
 {
+    // toggles the accelerometer
     ICM_Model *sharedModel = [ICM_Model sharedModel];
     if (_accel.on == YES)
         [sharedModel setAccel:YES];

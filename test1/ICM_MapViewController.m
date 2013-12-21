@@ -29,12 +29,6 @@
 }
 
 - (void)loadView {
-    // Create a GMSCameraPosition that tells the map to display the
-    // coordinate -33.86,151.20 at zoom level 6.
-//    NE = 51.087755,-114.116585 SW = 51.074221,-114.144523
-//    CLLocationCoordinate2D NE = CLLocationCoordinate2DMake(51.087755, -114.116585);
-//    CLLocationCoordinate2D SW = CLLocationCoordinate2DMake(51.074221, -114.144523);
-//    GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc] initWithCoordinate:NE coordinate:SW];
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:51.078198
                                                             longitude:-114.130001
                                                                  zoom:17];

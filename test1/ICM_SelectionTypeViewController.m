@@ -65,6 +65,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+// this function grabs the suers current location and finds the closest node
+// to the user
 - (IBAction)getGPSLocation:(id)sender
 {
     GMSMapView *mapView;
@@ -72,18 +74,8 @@
     CLLocation *myLocation = mapView.myLocation;
     ICM_Model *sharedModel = [ICM_Model sharedModel];
     
-    // uncomment this for actual GPS info
     CLLocation *locA = [[CLLocation alloc] initWithLatitude:myLocation.coordinate.latitude longitude:myLocation.coordinate.longitude];
     
-    // dummy info
-    // 51.078134,-114.127758 = node 3 closest
-//    CLLocation *locA = [[CLLocation alloc] initWithLatitude:51.078134 longitude:-114.127758];
-//    // 51.077789,-114.127436 = node 2 closest
-//    CLLocation *locA = [[CLLocation alloc] initWithLatitude:51.077789 longitude:-114.127436];
-//    // 51.077711,-114.127978 = node 1 closest
-//    CLLocation *locA = [[CLLocation alloc] initWithLatitude:51.077711 longitude:-114.127978];
-//    // 51.077891,-114.128463 = node 0 closest
-    //CLLocation *locA = [[CLLocation alloc] initWithLatitude:51.077891 longitude:-114.128463];
     
     int closestNodeIndex = -1;
     CLLocationDistance shortestDistance = 999999;
@@ -99,8 +91,7 @@
             closestNodeIndex = x;
         }
         //Distance in Meters
-    }
-    // NSLog(@"Closest Node Name = %@", [[[sharedModel nodeList] objectAtIndex:closestNodeIndex] name]);
+    }    
     
     [sharedModel setStartNode:[[sharedModel nodeList] objectAtIndex:closestNodeIndex]];
     [self.navigationController popViewControllerAnimated:YES];

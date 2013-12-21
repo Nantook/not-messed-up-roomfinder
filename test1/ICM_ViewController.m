@@ -19,11 +19,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    //    [sharedModel setStartNode:[[sharedModel nodeList] objectAtIndex:3]];
-    //    [sharedModel setEndNode:[[sharedModel nodeList] objectAtIndex:8]];
-    //    [sharedModel setShortestPath:[sharedModel dijsktra:[sharedModel startNode] EndNode:[sharedModel endNode]]];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -33,11 +28,12 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    
+    // basic setup stuff
     self.navigationController.navigationBarHidden = YES;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     ICM_Model *sharedModel = [ICM_Model sharedModel];

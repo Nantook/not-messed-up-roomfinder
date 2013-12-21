@@ -13,6 +13,8 @@
 
 @implementation ICM_Model
 
+
+// reset the user changeable data
 - (void)reset
 {
     _accel = YES;
@@ -42,327 +44,6 @@
                
         _nodeList = [[NSMutableArray alloc] init];
 
-        {
-        // adds the initial 4 nodes
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:51.0779 Longitude:-114.128651 Photo:@"1.jpg"] Name:@"Node 0"]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:51.078235 Longitude:-114.127691 Photo:@"2.jpg"] Name:@"Node 1"]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:51.0776 Longitude:-114.128053 Photo:@"MS 3.jpg"] Name:@"Node 2"]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:51.077772 Longitude:-114.127238 Photo:@"4.jpg"] Name:@"Node 3"]];
-//        
-//        // neighbours for node 0
-//        [[_nodeList objectAtIndex:0] addNeighbour:[_nodeList objectAtIndex:1]];
-//        [[_nodeList objectAtIndex:0] addNeighbour:[_nodeList objectAtIndex:2]];
-//        	
-//        // neighbours for node 1
-//        [[_nodeList objectAtIndex:1] addNeighbour:[_nodeList objectAtIndex:0]];
-//        [[_nodeList objectAtIndex:1] addNeighbour:[_nodeList objectAtIndex:3]];
-//        
-//        // neighbours for node 2
-//        [[_nodeList objectAtIndex:2] addNeighbour:[_nodeList objectAtIndex:0]];
-//        [[_nodeList objectAtIndex:2] addNeighbour:[_nodeList objectAtIndex:3]];
-//        
-//        // neighbours for node 3
-//        [[_nodeList objectAtIndex:3] addNeighbour:[_nodeList objectAtIndex:1]];
-//        [[_nodeList objectAtIndex:3] addNeighbour:[_nodeList objectAtIndex:2]];
-
-// default graph 2
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:51.078525 Longitude:-114.127975 Name:@"Node 0 - dynamic"]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:51.078164 Longitude:-114.128713 Name:@"Node 1 - searching"]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:51.078158 Longitude:-114.128133 Name:@"Node 2 - dynamic"]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:51.078244 Longitude:-114.127694 Name:@"Node 3 - searching"]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:51.078117 Longitude:-114.128842 Name:@"Node 4 - dynamic searching"]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:51.077903 Longitude:-114.128678 Name:@"Node 5 - dynamic"]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:51.077682 Longitude:-114.128144 Name:@"Node 6 - searching"]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:51.077645 Longitude:-114.12779 Name:@"Node 7 - ICM"]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:51.077773 Longitude:-114.127232 Name:@"Node 8 - ICM"]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:51.077586 Longitude:-114.128058 Name:@"Node 9 - ICM"]];
-//
-//        // neighbours for node 0
-//        [[_nodeList objectAtIndex:0] addNeighbour:[_nodeList objectAtIndex:1]];
-//        [[_nodeList objectAtIndex:0] addNeighbour:[_nodeList objectAtIndex:3]];
-//
-//        // neighbours for node 1
-//        [[_nodeList objectAtIndex:1] addNeighbour:[_nodeList objectAtIndex:0]];
-//        [[_nodeList objectAtIndex:1] addNeighbour:[_nodeList objectAtIndex:2]];
-//        [[_nodeList objectAtIndex:1] addNeighbour:[_nodeList objectAtIndex:4]];
-//        
-//        // neighbours for node 2
-//        [[_nodeList objectAtIndex:2] addNeighbour:[_nodeList objectAtIndex:1]];
-//        [[_nodeList objectAtIndex:2] addNeighbour:[_nodeList objectAtIndex:3]];
-//        [[_nodeList objectAtIndex:2] addNeighbour:[_nodeList objectAtIndex:5]];
-//        
-//        // neighbours for node 3
-//        [[_nodeList objectAtIndex:3] addNeighbour:[_nodeList objectAtIndex:0]];
-//        [[_nodeList objectAtIndex:3] addNeighbour:[_nodeList objectAtIndex:2]];
-//        [[_nodeList objectAtIndex:3] addNeighbour:[_nodeList objectAtIndex:8]];
-//        
-//        // neighbours for node 4
-//        [[_nodeList objectAtIndex:4] addNeighbour:[_nodeList objectAtIndex:1]];
-//        [[_nodeList objectAtIndex:4] addNeighbour:[_nodeList objectAtIndex:5]];
-//        
-//        // neighbours for node 5
-//        [[_nodeList objectAtIndex:5] addNeighbour:[_nodeList objectAtIndex:2]];
-//        [[_nodeList objectAtIndex:5] addNeighbour:[_nodeList objectAtIndex:4]];
-//        [[_nodeList objectAtIndex:5] addNeighbour:[_nodeList objectAtIndex:6]];
-//
-//        // neighbours for node 6
-//        [[_nodeList objectAtIndex:6] addNeighbour:[_nodeList objectAtIndex:5]];
-//        [[_nodeList objectAtIndex:6] addNeighbour:[_nodeList objectAtIndex:7]];
-//        [[_nodeList objectAtIndex:6] addNeighbour:[_nodeList objectAtIndex:9]];
-//        
-//        // neighbours for node 7
-//        [[_nodeList objectAtIndex:7] addNeighbour:[_nodeList objectAtIndex:6]];
-//        [[_nodeList objectAtIndex:7] addNeighbour:[_nodeList objectAtIndex:8]];
-//        [[_nodeList objectAtIndex:7] addNeighbour:[_nodeList objectAtIndex:9]];
-//        
-//        // neighbours for node 8
-//        [[_nodeList objectAtIndex:8] addNeighbour:[_nodeList objectAtIndex:3]];
-//        [[_nodeList objectAtIndex:8] addNeighbour:[_nodeList objectAtIndex:7]];
-//        
-//        // neighbours for node 9
-//        [[_nodeList objectAtIndex:9] addNeighbour:[_nodeList objectAtIndex:6]];
-//        [[_nodeList objectAtIndex:9] addNeighbour:[_nodeList objectAtIndex:7]];
-        
-// default graph 3
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:50.87701 Longitude:-114.070885 Name:@"Node 0" FrontImage:@"panophoto.front.jpg"] RightImage:@"panophoto.right.jpg"] BackImage:@"panophoto.back.jpg"] LeftImage:@"panophoto.left.jpg"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:50.877545 Longitude:-114.070912 Name:@"Node 1" FrontImage:@"front.png"] RightImage:@"right.png"] BackImage:@"back.png"] LeftImage:@"left.png"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValues:YES Ground:YES Lattitude:50.877569 Longitude:-114.071877 Name:@"Node 2" FrontImage:@"TowerHousepano_f.jpg"] RightImage:@"TowerHousepano_r.jpg"] BackImage:@"TowerHousepano_b.jpg"] LeftImage:@"TowerHousepano_l.jpg"]]];
-//        
-//        // neighbours for node 0
-//        [[_nodeList objectAtIndex:0] addNeighbour:[_nodeList objectAtIndex:1]];
-//        [[_nodeList objectAtIndex:1] addNeighbour:[_nodeList objectAtIndex:0]];
-//        [[_nodeList objectAtIndex:1] addNeighbour:[_nodeList objectAtIndex:2]];
-//        [[_nodeList objectAtIndex:2] addNeighbour:[_nodeList objectAtIndex:1]];
-        }
-
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
-//                                                               Type:@"room"
-//                                                             Ground:YES
-//                                                          Lattitude:51.079962
-//                                                          Longitude:-114.128418
-//                                                               Name:@"West Stairs"
-//                                                           Building:[_buildingList objectAtIndex:1]
-//                                                         FrontImage:@"panophoto.front.jpg"]
-//                                                         RightImage:@"panophoto.right.jpg"]
-//                                                          BackImage:@"panophoto.back.jpg"]
-//                                                          LeftImage:@"panophoto.left.jpg"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
-//                                                               Type:@"hallway"
-//                                                             Ground:YES
-//                                                          Lattitude:51.080006
-//                                                          Longitude:-114.128379
-//                                                               Name:@"West Hallway 0"
-//                                                           Building:[_buildingList objectAtIndex:1]
-//                                                         FrontImage:@"front.png"]
-//                                                         RightImage:@"right.png"]
-//                                                          BackImage:@"back.png"]
-//                                                          LeftImage:@"left.png"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
-//                                                               Type:@"hallway"
-//                                                             Ground:YES
-//                                                          Lattitude:51.080069
-//                                                          Longitude:-114.128359
-//                                                               Name:@"West Hallway 1"
-//                                                           Building:[_buildingList objectAtIndex:1]
-//                                                         FrontImage:@"front.png"]
-//                                                         RightImage:@"right.png"]
-//                                                          BackImage:@"back.png"]
-//                                                          LeftImage:@"left.png"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
-//                                                               Type:@"entrance"
-//                                                             Ground:YES
-//                                                          Lattitude:51.080115
-//                                                          Longitude:-114.128068
-//                                                               Name:@"North Entrance"
-//                                                           Building:[_buildingList objectAtIndex:1]
-//                                                         FrontImage:@"front.png"]
-//                                                         RightImage:@"right.png"]
-//                                                          BackImage:@"back.png"]
-//                                                          LeftImage:@"left.png"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
-//                                                               Type:@"hallway"
-//                                                             Ground:YES
-//                                                          Lattitude:51.080074
-//                                                          Longitude:-114.128057
-//                                                               Name:@"South of Entrance junction"
-//                                                           Building:[_buildingList objectAtIndex:1]
-//                                                         FrontImage:@"front.png"]
-//                                                         RightImage:@"right.png"]
-//                                                          BackImage:@"back.png"]
-//                                                          LeftImage:@"left.png"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
-//                                                               Type:@"hallway"
-//                                                             Ground:YES
-//                                                          Lattitude:51.079972
-//                                                          Longitude:-114.128061
-//                                                               Name:@"CPSC lab entrance"
-//                                                           Building:[_buildingList objectAtIndex:1]
-//                                                         FrontImage:@"front.png"]
-//                                                         RightImage:@"right.png"]
-//                                                          BackImage:@"back.png"]
-//                                                          LeftImage:@"left.png"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
-//                                                               Type:@"room"
-//                                                             Ground:YES
-//                                                          Lattitude:51.080109
-//                                                          Longitude:-114.12801
-//                                                               Name:@"Main Elevator"
-//                                                           Building:[_buildingList objectAtIndex:1]
-//                                                         FrontImage:@"front.png"]
-//                                                         RightImage:@"right.png"]
-//                                                          BackImage:@"back.png"]
-//                                                          LeftImage:@"left.png"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
-//                                                               Type:@"hallway"
-//                                                             Ground:YES
-//                                                          Lattitude:51.080079
-//                                                          Longitude:-114.128006
-//                                                               Name:@"elevator foyer"
-//                                                           Building:[_buildingList objectAtIndex:1]
-//                                                         FrontImage:@"front.png"]
-//                                                         RightImage:@"right.png"]
-//                                                          BackImage:@"back.png"]
-//                                                          LeftImage:@"left.png"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
-//                                                               Type:@"room"
-//                                                             Ground:YES
-//                                                          Lattitude:51.080116
-//                                                          Longitude:-114.127955
-//                                                               Name:@"main stairs"
-//                                                           Building:[_buildingList objectAtIndex:1]
-//                                                         FrontImage:@"front.png"]
-//                                                         RightImage:@"right.png"]
-//                                                          BackImage:@"back.png"]
-//                                                          LeftImage:@"left.png"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
-//                                                               Type:@"hallway"
-//                                                             Ground:YES
-//                                                          Lattitude:51.080084
-//                                                          Longitude:-114.127783
-//                                                               Name:@"north lab hallway"
-//                                                           Building:[_buildingList objectAtIndex:1]
-//                                                         FrontImage:@"front.png"]
-//                                                         RightImage:@"right.png"]
-//                                                          BackImage:@"back.png"]
-//                                                          LeftImage:@"left.png"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
-//                                                               Type:@"hallway"
-//                                                             Ground:YES
-//                                                          Lattitude:51.079969
-//                                                          Longitude:-114.127779
-//                                                               Name:@"south lab hallway"
-//                                                           Building:[_buildingList objectAtIndex:1]
-//                                                         FrontImage:@"front.png"]
-//                                                         RightImage:@"right.png"]
-//                                                          BackImage:@"back.png"]
-//                                                          LeftImage:@"left.png"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
-//                                                               Type:@"hallway"
-//                                                             Ground:YES
-//                                                          Lattitude:51.079973
-//                                                          Longitude:-114.127586
-//                                                               Name:@"east hallway 0"
-//                                                           Building:[_buildingList objectAtIndex:1]
-//                                                         FrontImage:@"front.png"]
-//                                                         RightImage:@"right.png"]
-//                                                          BackImage:@"back.png"]
-//                                                          LeftImage:@"left.png"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
-//                                                               Type:@"hallway"
-//                                                             Ground:YES
-//                                                          Lattitude:51.080061
-//                                                          Longitude:-114.127558
-//                                                               Name:@"east hallway 1"
-//                                                           Building:[_buildingList objectAtIndex:1]
-//                                                         FrontImage:@"front.png"]
-//                                                         RightImage:@"right.png"]
-//                                                          BackImage:@"back.png"]
-//                                                          LeftImage:@"left.png"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
-//                                                               Type:@"room"
-//                                                             Ground:YES
-//                                                          Lattitude:51.080071
-//                                                          Longitude:-114.127465
-//                                                               Name:@"East Stairs"
-//                                                           Building:[_buildingList objectAtIndex:1]
-//                                                         FrontImage:@"front.png"]
-//                                                         RightImage:@"right.png"]
-//                                                          BackImage:@"back.png"]
-//                                                          LeftImage:@"left.png"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
-//                                                               Type:@"entrance"
-//                                                             Ground:YES
-//                                                          Lattitude:51.080011
-//                                                          Longitude:-114.127456
-//                                                               Name:@"East Entrance"
-//                                                           Building:[_buildingList objectAtIndex:1]
-//                                                         FrontImage:@"front.png"]
-//                                                         RightImage:@"right.png"]
-//                                                          BackImage:@"back.png"]
-//                                                          LeftImage:@"left.png"]]];
-//        [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
-//                                                               Type:@"room"
-//                                                             Ground:YES
-//                                                          Lattitude:51.079948
-//                                                          Longitude:-114.127457
-//                                                               Name:@"East Elevator"
-//                                                           Building:[_buildingList objectAtIndex:1]
-//                                                         FrontImage:@"front.png"]
-//                                                         RightImage:@"right.png"]
-//                                                          BackImage:@"back.png"]
-//                                                          LeftImage:@"left.png"]]];
-//
-//        
-//
-//        [[_nodeList objectAtIndex:0] addNeighbour:[_nodeList objectAtIndex:1]];
-//        
-//        [[_nodeList objectAtIndex:1] addNeighbour:[_nodeList objectAtIndex:0]];
-//        [[_nodeList objectAtIndex:1] addNeighbour:[_nodeList objectAtIndex:2]];
-//        
-//        [[_nodeList objectAtIndex:2] addNeighbour:[_nodeList objectAtIndex:1]];
-//        [[_nodeList objectAtIndex:2] addNeighbour:[_nodeList objectAtIndex:4]];
-//        
-//        [[_nodeList objectAtIndex:3] addNeighbour:[_nodeList objectAtIndex:4]];
-//        
-//        [[_nodeList objectAtIndex:4] addNeighbour:[_nodeList objectAtIndex:2]];
-//        [[_nodeList objectAtIndex:4] addNeighbour:[_nodeList objectAtIndex:3]];
-//        [[_nodeList objectAtIndex:4] addNeighbour:[_nodeList objectAtIndex:5]];
-//        [[_nodeList objectAtIndex:4] addNeighbour:[_nodeList objectAtIndex:7]];
-//        
-//        [[_nodeList objectAtIndex:5] addNeighbour:[_nodeList objectAtIndex:4]];
-//        [[_nodeList objectAtIndex:5] addNeighbour:[_nodeList objectAtIndex:10]];
-//        
-//        [[_nodeList objectAtIndex:6] addNeighbour:[_nodeList objectAtIndex:7]];
-//        
-//        [[_nodeList objectAtIndex:7] addNeighbour:[_nodeList objectAtIndex:4]];
-//        [[_nodeList objectAtIndex:7] addNeighbour:[_nodeList objectAtIndex:6]];
-//        [[_nodeList objectAtIndex:7] addNeighbour:[_nodeList objectAtIndex:8]];
-//        [[_nodeList objectAtIndex:7] addNeighbour:[_nodeList objectAtIndex:9]];
-//        
-//        [[_nodeList objectAtIndex:8] addNeighbour:[_nodeList objectAtIndex:7]];
-//        
-//        [[_nodeList objectAtIndex:9] addNeighbour:[_nodeList objectAtIndex:7]];
-//        [[_nodeList objectAtIndex:9] addNeighbour:[_nodeList objectAtIndex:10]];
-//        [[_nodeList objectAtIndex:9] addNeighbour:[_nodeList objectAtIndex:12]];
-//        
-//        [[_nodeList objectAtIndex:10] addNeighbour:[_nodeList objectAtIndex:5]];
-//        [[_nodeList objectAtIndex:10] addNeighbour:[_nodeList objectAtIndex:9]];
-//        [[_nodeList objectAtIndex:10] addNeighbour:[_nodeList objectAtIndex:11]];
-//        
-//        [[_nodeList objectAtIndex:11] addNeighbour:[_nodeList objectAtIndex:10]];
-//        [[_nodeList objectAtIndex:11] addNeighbour:[_nodeList objectAtIndex:14]];
-//        
-//        [[_nodeList objectAtIndex:12] addNeighbour:[_nodeList objectAtIndex:9]];
-//        [[_nodeList objectAtIndex:12] addNeighbour:[_nodeList objectAtIndex:14]];
-//        
-//        [[_nodeList objectAtIndex:13] addNeighbour:[_nodeList objectAtIndex:14]];
-//        
-//        [[_nodeList objectAtIndex:14] addNeighbour:[_nodeList objectAtIndex:11]];
-//        [[_nodeList objectAtIndex:14] addNeighbour:[_nodeList objectAtIndex:12]];
-//        [[_nodeList objectAtIndex:14] addNeighbour:[_nodeList objectAtIndex:13]];
-//        [[_nodeList objectAtIndex:14] addNeighbour:[_nodeList objectAtIndex:15]];
-//        
-//        [[_nodeList objectAtIndex:15] addNeighbour:[_nodeList objectAtIndex:14]];
 
 // 0
         [_nodeList addObject:[[ICM_Node alloc] initWithValuesInside:YES
@@ -2500,24 +2181,6 @@
             }
         }
         
-//        for (int a = 0; a < [_nodeList count]; a++)
-//        {
-//            NSLog(@"%@", [[_nodeList objectAtIndex:a] name]);
-//            for (int b = 0; b < [[[_nodeList objectAtIndex:a] neighboursAndWeights] count]; b++)
-//            {
-//                NSLog(@"Neighbour = %@  Weight = %i", [[[[[_nodeList objectAtIndex:a] neighboursAndWeights] objectAtIndex:b] objectAtIndex:0] name], [[[[[_nodeList objectAtIndex:a] neighboursAndWeights] objectAtIndex:b] objectAtIndex:1] integerValue]);
-//            }
-//        }
-//        
-//        NSLog(@"");
-//        
-//        // debug function, displays a 4x4 adj matrix, must be updated for smaller or larger matrices
-//                for (int x = 0; x < [_nodeList count]; x++)
-//                {
-//                    NSLog(@"%i %i %i %i %i %i", [[[_adjacancyMatrix objectAtIndex:x] objectAtIndex:0] integerValue], [[[_adjacancyMatrix objectAtIndex:x] objectAtIndex:1] integerValue], [[[_adjacancyMatrix objectAtIndex:x] objectAtIndex:2] integerValue], [[[_adjacancyMatrix objectAtIndex:x] objectAtIndex:3] integerValue], [[[_adjacancyMatrix objectAtIndex:x] objectAtIndex:4] integerValue], [[[_adjacancyMatrix objectAtIndex:x] objectAtIndex:5] integerValue]);
-//                }
-        
-        
     }
     return self;
 }
@@ -2538,6 +2201,7 @@
     return singleModel;
 }
 
+// very crappy dijsktra's implementation, VERY INEFFICIENT
 - (NSArray*)dijsktra:(ICM_Node*)startNode EndNode:(ICM_Node*)endNode;
 {
     int n = [_nodeList count];
@@ -2619,10 +2283,6 @@
         {
             [pruning addObject:[_shortestPath objectAtIndex:i]];
         }
-//        if (!([[_shortestPath objectAtIndex:i] panoView] == nil))
-//        {
-//            [pruning addObject:[_shortestPath objectAtIndex:i]];
-//        }
     }
     [pruning addObject:[_shortestPath objectAtIndex:[_shortestPath count]-2]];
     [pruning addObject:[_shortestPath objectAtIndex:[_shortestPath count]-1]];
@@ -2630,6 +2290,7 @@
     return pruned;
 }
 
+// calculates the bearing between two points
 - (float)getBearingFrom:(CLLocationCoordinate2D)from To:(CLLocationCoordinate2D)to;
 {
     float fLat = degreesToRadians(from.latitude);
@@ -2638,10 +2299,6 @@
     float tLng = degreesToRadians(to.longitude);
     
     float degree = radiandsToDegrees(atan2(sin(tLng-fLng)*cos(tLat), cos(fLat)*sin(tLat)-sin(fLat)*cos(tLat)*cos(tLng-fLng)));
-//    float rad = atan2(sin(tLng-fLng)*cos(tLat), cos(fLat)*sin(tLat)-sin(fLat)*cos(tLat)*cos(tLng-fLng));
-//    rad += M_PI;
-//    NSLog(@"%f", rad);
-//    return rad;
     if (degree >= 0) {
         return degree;
     } else {

@@ -6,6 +6,9 @@
 //  Copyright (c) 2013 ICM. All rights reserved.
 //
 
+// View Controller for the view that has the path on it where you select your
+// start and end locations
+
 #import <UIKit/UIKit.h>
 
 @interface ICM_DirectionsViewController : UIViewController

@@ -20,13 +20,19 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithNibName:nibNameOrNil
+                           bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
     return self;
 }
 
+
+// the way the timer works for selecting by GPS is that when you press down
+// on the pin it gets the current date. When you release the button, if > 2
+// seconds have passed, then manually calculate the current closest node
+// based on the current GPS coordinates
 - (IBAction)startPressed:(id)sender
 {
     self.buttonTouchDownDate = [NSDate date];
@@ -42,24 +48,20 @@
         CLLocation *myLocation = mapView.myLocation;
         ICM_Model *sharedModel = [ICM_Model sharedModel];
         
-        // uncomment this for actual GPS info
-        CLLocation *locA = [[CLLocation alloc] initWithLatitude:myLocation.coordinate.latitude longitude:myLocation.coordinate.longitude];
+        // grabs current GPS coordinates
+        CLLocation *locA = [[CLLocation alloc] initWithLatitude:myLocation.coordinate.latitude
+                                                      longitude:myLocation.coordinate.longitude];
         
-        // dummy info
-        // 51.078134,-114.127758 = node 3 closest
-        //    CLLocation *locA = [[CLLocation alloc] initWithLatitude:51.078134 longitude:-114.127758];
-        //    // 51.077789,-114.127436 = node 2 closest
-        //    CLLocation *locA = [[CLLocation alloc] initWithLatitude:51.077789 longitude:-114.127436];
-        //    // 51.077711,-114.127978 = node 1 closest
-        //    CLLocation *locA = [[CLLocation alloc] initWithLatitude:51.077711 longitude:-114.127978];
-        //    // 51.077891,-114.128463 = node 0 closest
-        //CLLocation *locA = [[CLLocation alloc] initWithLatitude:51.077891 longitude:-114.128463];
         
         int closestNodeIndex = -1;
         CLLocationDistance shortestDistance = -1;
+        
+        // for loop that finds the node with the closest distance to the current
+        // GPS coordinates
         for (int x = 0; x < [[sharedModel nodeList] count]; x++)
         {
-            CLLocation *locB = [[CLLocation alloc] initWithLatitude:[[[sharedModel nodeList] objectAtIndex:x] nodeLocation].latitude longitude:[[[sharedModel nodeList] objectAtIndex:x] nodeLocation].longitude];
+            CLLocation *locB = [[CLLocation alloc] initWithLatitude:[[[sharedModel nodeList] objectAtIndex:x] nodeLocation].latitude
+                                                          longitude:[[[sharedModel nodeList] objectAtIndex:x] nodeLocation].longitude];
             
             
             CLLocationDistance currentDistance = [locA distanceFromLocation:locB];
@@ -70,17 +72,20 @@
             }
             //Distance in Meters
         }
-        // NSLog(@"Closest Node Name = %@", [[[sharedModel nodeList] objectAtIndex:closestNodeIndex] name]);
         
+        // sets the start node as the closest node to the current GPS
         [sharedModel setStartNode:[[sharedModel nodeList] objectAtIndex:closestNodeIndex]];
         [self calculateStuff];
     }
+    // button didn't get held for > 2 seconds, continue normally
     else
     {
         [self performSegueWithIdentifier: @"selectStart" sender: self];
     }
 }
 
+
+// updates the labels based on whether a start/end node has been selected
 - (void)calculateStuff
 {
     
@@ -93,16 +98,12 @@
             NSString *text = @"From: ";
             text = [text stringByAppendingString:[[sharedModel startNode] name]];
             [_startLabel setText:text];
-            //            [_startButton setTitle:[NSString stringWithFormat:@"From: %@", [[sharedModel startNode  ] name]] forState: UIControlStateNormal];
         }
         if ([sharedModel endNode])
         {
             NSString *text = @"To: ";
             text = [text stringByAppendingString:[[sharedModel endNode] name]];
             [_destLabel setText:text];
-            //            [_destinationButton setTitle:[NSString stringWithFormat:@"To: %@", [[sharedModel    endNode] name]] forState: UIControlStateNormal];
-            //        _destinationButton.text = [[sharedModel endNode] name];
-            ///       _destinationButton.textAlignment = NSTextAlignmentCenter;
         }
         if ([sharedModel startNode] && [sharedModel endNode])
         {
@@ -110,6 +111,7 @@
             _calculateRouteButton.enabled = YES;
         }
     }
+    // error in selection of nodes
     else
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Selection Error"
@@ -122,8 +124,6 @@
         [sharedModel setEndNode:nil];
         [_startLabel setText:@"<< Click on the pin to select the start location"];
         [_destLabel setText:@"Click on the pin to select the destination location >>"];
-        //        [_startButton setTitle:@"Select Start Location" forState: UIControlStateNormal];
-        //        [_destinationButton setTitle:@"Select Destination" forState: UIControlStateNormal];
     }
     [self.view setNeedsDisplay];
 }
@@ -137,8 +137,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // some random button setup as well as adding the home button
     _calculateRouteButton.hidden = YES;
-    UIBarButtonItem *button1 = [[UIBarButtonItem alloc] initWithTitle:@"            " style:self.editButtonItem target:self action:@selector(nothing:)];
+    UIBarButtonItem *button1 = [[UIBarButtonItem alloc] initWithTitle:@"            "
+                                                                style:self.editButtonItem
+                                                               target:self
+                                                               action:@selector(nothing:)];
     self.navigationItem.rightBarButtonItem = button1;
     UIButton *button3 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button3 setTitle:@"Home" forState:UIControlStateNormal];
@@ -152,6 +156,7 @@
 	// Do any additional setup after loading the view.
 }
 
+// reset the model and return home
 - (void)home:(id)sender
 {
     ICM_Model *sharedModel = [ICM_Model sharedModel];
@@ -165,12 +170,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+// calculates the shortest route and determines whether or not it is valid
 - (IBAction)calculateRoute:(id)sender
 {
     ICM_Model *sharedModel = [ICM_Model sharedModel];
     _calculateRouteButton.enabled = NO;
-    
-    
 
     UIActivityIndicatorView *activityIndicator=[[UIActivityIndicatorView alloc] init];
     [activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
@@ -213,12 +218,5 @@
             ;
         });
     });
-
-
-    
-
-
-
-//    NSLog(@"%@ %@ %@", [[results objectAtIndex:0] name], [[results objectAtIndex:1] name], [[results objectAtIndex:2] name]);
 }
 @end

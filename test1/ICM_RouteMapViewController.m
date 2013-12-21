@@ -29,9 +29,9 @@
     return self;
 }
 
+// loads a google map view with the shortest path displayed on it
 - (void)loadView {
     ICM_Model *sharedModel = [ICM_Model sharedModel];
-    //NSArray *results = [[NSArray alloc] initWithArray:([sharedModel shortestPath])];
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:[[sharedModel startNode] nodeLocation].latitude
                                                             longitude:[[sharedModel startNode] nodeLocation].longitude
                                                                  zoom:18];
@@ -47,7 +47,7 @@
     polyline.map = mapView_;
     
     GMSMarker *marker1 = [[GMSMarker alloc] init];
-    marker1 = [GMSMarker markerWithPosition:[[[sharedModel shortestPath] objectAtIndex:0] nodeLocation]];//[[sharedModel startNode] nodeLocation]];
+    marker1 = [GMSMarker markerWithPosition:[[[sharedModel shortestPath] objectAtIndex:0] nodeLocation]];
     marker1.title = @"Start";
     marker1.map = mapView_;
 
@@ -57,25 +57,12 @@
     marker2.map = mapView_;
     
     bounds = [[GMSCoordinateBounds alloc] initWithPath:path];
-//    GMSCoordinateBounds *bounds1 = [[GMSCoordinateBounds alloc] init];
-//    for (int i = 0; i < [results count]; i++)
-//    {
-//        [bounds includingCoordinate:[[results objectAtIndex:i] nodeLocation]];
-//    }
+
     GMSCameraUpdate *update = [GMSCameraUpdate fitBounds:bounds];
     
-    //[mapView_ moveCamera:update];
     self.view = mapView_;
     
-//    for (int i = 0; i < [[sharedModel shortestPath] count]; i++)
-//    {
-//        [[[sharedModel shortestPath] objectAtIndex:i] initPanoImages];
-//    }
     [sharedModel setShortestPath:[sharedModel pruneResults]];
-
-    // uncomment this if you are testing on a device with GPS
-    //mapView_.myLocationEnabled = YES;
-
 }
 
 - (void)viewDidLoad

@@ -25,6 +25,8 @@
     return self;
 }
 
+// limits list of rooms to those with a matching building name, also adds the
+// home button
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -84,6 +86,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     ICM_Model *sharedModel = [ICM_Model sharedModel];
+    // this is so stupid, why did I never change this
     if (tableView == self.searchDisplayController.searchResultsTableView)
         _x = 0;
     else
@@ -92,18 +95,10 @@
     if (_x == 1)
     {
         cell.textLabel.text = [[_roomList objectAtIndex:indexPath.row] name];
-        //        if ([[sharedModel endNode] isEqual:[[sharedModel nodeList] objectAtIndex:indexPath.row]])
-        //        {
-        //            cell.textLabel.textColor = [UIColor lightGrayColor];
-        //        }
     }
     else
     {
         cell.textLabel.text = [[_searchResults objectAtIndex:indexPath.row] name];
-        //        if ([[sharedModel endNode] isEqual:[_searchResults objectAtIndex:indexPath.row]])
-        //        {
-        //            cell.textLabel.textColor = [UIColor lightGrayColor];
-        //        }
     }
     
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
@@ -112,14 +107,6 @@
 
 - (NSIndexPath *)tableView:(UITableView *)tv willSelectRowAtIndexPath:(NSIndexPath *)path
 {
-    // Determine if row is selectable based on the NSIndexPath.
-    ICM_Model *sharedModel = [ICM_Model sharedModel];
-    
-    //    if ([[sharedModel endNode] isEqual:[[sharedModel nodeList] objectAtIndex:path.row]])
-    //    {
-    //        return nil;
-    //    }
-    
     return path;
 }
 
@@ -141,17 +128,11 @@
     }
     
     [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:[self.navigationController.viewControllers count]-3] animated:YES];
-    //[self.navigationController popViewControllerAnimated:YES];
-    
-    //    NSLog(@"Name of start node = %@", [[sharedModel startNode] name]);
 }
 
 -(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
-    // Update the filtered array based on the search text and scope.
-    // Remove all objects from the filtered search array
     [_searchResults removeAllObjects];
     ICM_Model *sharedModel = [ICM_Model sharedModel];
-    // Filter the array using NSPredicate
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@",searchText];
     _searchResults = [NSMutableArray arrayWithArray:[_roomList filteredArrayUsingPredicate:predicate]];
 }

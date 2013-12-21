@@ -25,6 +25,7 @@
     return self;
 }
 
+// see ICM_PanoView1Controller for details about the panoview
 - (void)viewDidLoad
 {
     [super viewDidLoad];

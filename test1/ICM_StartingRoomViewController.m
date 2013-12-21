@@ -5,6 +5,7 @@
 //  Created by Brett Nishikawa on 2013-11-12.
 //  Copyright (c) 2013 ICM. All rights reserved.
 //
+// Displays the list of rooms based on the building that the user selected
 
 #import "ICM_StartingRoomViewController.h"
 #import "ICM_Model.h"
@@ -50,7 +51,6 @@
     [button3 addTarget:self
                 action:@selector(home:)
       forControlEvents:UIControlEventTouchUpInside];
-	// Do any additional setup after loading the view.
 }
 
 - (void)home:(id)sender
@@ -84,6 +84,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     ICM_Model *sharedModel = [ICM_Model sharedModel];
+    // hey look, it's this terrible code again!
     if (tableView == self.searchDisplayController.searchResultsTableView)
         _x = 0;
     else
@@ -92,18 +93,10 @@
     if (_x == 1)
     {
         cell.textLabel.text = [[_roomList objectAtIndex:indexPath.row] name];
-        //        if ([[sharedModel endNode] isEqual:[[sharedModel nodeList] objectAtIndex:indexPath.row]])
-        //        {
-        //            cell.textLabel.textColor = [UIColor lightGrayColor];
-        //        }
     }
     else
     {
         cell.textLabel.text = [[_searchResults objectAtIndex:indexPath.row] name];
-        //        if ([[sharedModel endNode] isEqual:[_searchResults objectAtIndex:indexPath.row]])
-        //        {
-        //            cell.textLabel.textColor = [UIColor lightGrayColor];
-        //        }
     }
     
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
@@ -112,14 +105,6 @@
 
 - (NSIndexPath *)tableView:(UITableView *)tv willSelectRowAtIndexPath:(NSIndexPath *)path
 {
-    // Determine if row is selectable based on the NSIndexPath.
-    ICM_Model *sharedModel = [ICM_Model sharedModel];
-    
-    //    if ([[sharedModel endNode] isEqual:[[sharedModel nodeList] objectAtIndex:path.row]])
-    //    {
-    //        return nil;
-    //    }
-    
     return path;
 }
 
@@ -141,9 +126,6 @@
     }
     
     [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:[self.navigationController.viewControllers count]-3] animated:YES];
-    //[self.navigationController popViewControllerAnimated:YES];
-    
-    //    NSLog(@"Name of start node = %@", [[sharedModel startNode] name]);
 }
 
 -(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {

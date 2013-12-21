@@ -11,6 +11,7 @@
 
 @implementation ICM_NavControllerDelegate
 
+// custom transition between pano images
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
                                   animationControllerForOperation:(UINavigationControllerOperation)operation
                                                fromViewController:(UIViewController *)fromVC

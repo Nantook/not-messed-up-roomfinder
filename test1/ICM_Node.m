@@ -36,6 +36,8 @@
     return self;
 }
 
+
+// initilizes the panoview for the current node
 - (void)initPanoImages
 {
     if (![_frontName isEqualToString:@"none"])
@@ -68,14 +70,9 @@
     }
 }
 
-// adds a neighbour to a node
+// adds a neighbour to a node and calculates the distance to it
 - (void)addNeighbour:(ICM_Node*)node
 {
-//    CLLocation *locB = [[CLLocation alloc] initWithLatitude:[[[sharedModel nodeList] objectAtIndex:x] nodeLocation].latitude longitude:[[[sharedModel nodeList] objectAtIndex:x] nodeLocation].longitude];
-//    
-//    
-//    CLLocationDistance currentDistance = [locA distanceFromLocation:locB];
-    //CLLocationDistance currentDistance = [locA distanceFromLocation:locB];
 
     CLLocation *locA = [[CLLocation alloc] initWithLatitude:_nodeLocation.latitude longitude:_nodeLocation.longitude];
     CLLocation *locB = [[CLLocation alloc] initWithLatitude:node.nodeLocation.latitude longitude:node.nodeLocation.longitude];

@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 ICM. All rights reserved.
 //
 
+// view controller for the ending room selection
+
 #import <UIKit/UIKit.h>
 
 @interface ICM_EndingRoomViewController : UITableViewController

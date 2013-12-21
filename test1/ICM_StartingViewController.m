@@ -5,6 +5,7 @@
 //  Created by Brett Nishikawa on 2013-10-17.
 //  Copyright (c) 2013 ICM. All rights reserved.
 //
+// loads the building list into a tableview and allows a user to select one
 
 #import "ICM_StartingViewController.h"
 #import "ICM_Model.h"
@@ -26,6 +27,7 @@
 
 - (void)viewDidLoad
 {
+    // basic setup + adding the home button
     [super viewDidLoad];
     _x = 0;
     ICM_Model *sharedModel = [ICM_Model sharedModel];
@@ -76,6 +78,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     ICM_Model *sharedModel = [ICM_Model sharedModel];
+    // stupid code that never got refractored
     if (tableView == self.searchDisplayController.searchResultsTableView)
         _x = 0;
     else
@@ -112,10 +115,6 @@
     }
 
     [self performSegueWithIdentifier: @"forward" sender: self];
-//    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:[self.navigationController.viewControllers count]-3] animated:YES];
-    //[self.navigationController popViewControllerAnimated:YES];
-
-//    NSLog(@"Name of start node = %@", [[sharedModel startNode] name]);
 }
 
 -(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {

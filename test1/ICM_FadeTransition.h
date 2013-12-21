@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 ICM. All rights reserved.
 //
 
+// custom fade transition
+
 #import <Foundation/Foundation.h>
 
 @interface ICM_FadeTransition : NSObject <UIViewControllerAnimatedTransitioning>

@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 ICM. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "JAPanoView.h"
@@ -29,7 +30,17 @@
 @property (strong, nonatomic) NSString *rightName;
 @property (strong, nonatomic) NSString *backName;
 
-- (id)initWithValuesInside:(BOOL)inside Type:(NSString*)type Ground:(BOOL)ground Lattitude:(float)lattitude Longitude:(float)longitude Name:(NSString*)name Building:(NSString*)building FrontImage:(NSString*)front RightImage:(NSString*)Right BackImage:(NSString*)back LeftImage:(NSString*)left;
+- (id)initWithValuesInside:(BOOL)inside
+                      Type:(NSString*)type
+                    Ground:(BOOL)ground
+                 Lattitude:(float)lattitude
+                 Longitude:(float)longitude
+                      Name:(NSString*)name
+                  Building:(NSString*)building
+                FrontImage:(NSString*)front
+                RightImage:(NSString*)Right
+                 BackImage:(NSString*)back
+                 LeftImage:(NSString*)left;
 
 - (void)addNeighbour:(ICM_Node*)node;
 - (void)initPanoImages;

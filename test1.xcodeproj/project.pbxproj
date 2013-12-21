@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE9D1A8E1865634300819B65 /* Splash screen 640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9D1A8D1865634300819B65 /* Splash screen 640x960.png */; };
 		CEC134401853B29300E2D4CD /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC1343F1853B29300E2D4CD /* next.png */; };
 		CEC134421853B3E300E2D4CD /* back1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC134411853B3E300E2D4CD /* back1.png */; };
 		CEE6A7F11850066700B7B177 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE6A7F01850066700B7B177 /* Foundation.framework */; };
@@ -195,7 +196,6 @@
 		CEE6A9981850085100B7B177 /* ICM_NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE6A9841850085100B7B177 /* ICM_NavigationViewController.m */; };
 		CEE6A9991850085100B7B177 /* ICM_Node.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE6A9851850085100B7B177 /* ICM_Node.m */; };
 		CEE6A99A1850085100B7B177 /* ICM_Pano1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE6A9861850085100B7B177 /* ICM_Pano1ViewController.m */; };
-		CEE6A99B1850085100B7B177 /* ICM_Pano2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE6A9871850085100B7B177 /* ICM_Pano2ViewController.m */; };
 		CEE6A99C1850085100B7B177 /* ICM_PanoAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE6A9881850085100B7B177 /* ICM_PanoAboutUsViewController.m */; };
 		CEE6A99D1850085100B7B177 /* ICM_RouteMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE6A9891850085100B7B177 /* ICM_RouteMapViewController.m */; };
 		CEE6A99E1850085100B7B177 /* ICM_Segue_FadeIn.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE6A98A1850085100B7B177 /* ICM_Segue_FadeIn.m */; };
@@ -232,6 +232,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE9D1A8D1865634300819B65 /* Splash screen 640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash screen 640x960.png"; sourceTree = "<group>"; };
 		CEC1343F1853B29300E2D4CD /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		CEC134411853B3E300E2D4CD /* back1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back1.png; sourceTree = "<group>"; };
 		CEE6A7ED1850066700B7B177 /* test1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -425,7 +426,6 @@
 		CEE6A96F1850080100B7B177 /* ICM_NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICM_NavigationViewController.h; sourceTree = "<group>"; };
 		CEE6A9701850080100B7B177 /* ICM_Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICM_Node.h; sourceTree = "<group>"; };
 		CEE6A9711850080100B7B177 /* ICM_Pano1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICM_Pano1ViewController.h; sourceTree = "<group>"; };
-		CEE6A9721850080100B7B177 /* ICM_Pano2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICM_Pano2ViewController.h; sourceTree = "<group>"; };
 		CEE6A9731850080100B7B177 /* ICM_PanoAboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICM_PanoAboutUsViewController.h; sourceTree = "<group>"; };
 		CEE6A9741850080100B7B177 /* ICM_RouteMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICM_RouteMapViewController.h; sourceTree = "<group>"; };
 		CEE6A9751850080100B7B177 /* ICM_Segue_FadeIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICM_Segue_FadeIn.h; sourceTree = "<group>"; };
@@ -446,7 +446,6 @@
 		CEE6A9841850085100B7B177 /* ICM_NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICM_NavigationViewController.m; sourceTree = "<group>"; };
 		CEE6A9851850085100B7B177 /* ICM_Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICM_Node.m; sourceTree = "<group>"; };
 		CEE6A9861850085100B7B177 /* ICM_Pano1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICM_Pano1ViewController.m; sourceTree = "<group>"; };
-		CEE6A9871850085100B7B177 /* ICM_Pano2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICM_Pano2ViewController.m; sourceTree = "<group>"; };
 		CEE6A9881850085100B7B177 /* ICM_PanoAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICM_PanoAboutUsViewController.m; sourceTree = "<group>"; };
 		CEE6A9891850085100B7B177 /* ICM_RouteMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICM_RouteMapViewController.m; sourceTree = "<group>"; };
 		CEE6A98A1850085100B7B177 /* ICM_Segue_FadeIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICM_Segue_FadeIn.m; sourceTree = "<group>"; };
@@ -556,54 +555,52 @@
 		CEE6A7F61850066700B7B177 /* test1 */ = {
 			isa = PBXGroup;
 			children = (
-				CEE6A9A41850085B00B7B177 /* JAPanoView.m */,
-				CEE6A97C1850085100B7B177 /* ICM_DirectionsViewController.m */,
-				CEE6A97D1850085100B7B177 /* ICM_EndingRoomViewController.m */,
-				CEE6A97E1850085100B7B177 /* ICM_EndingViewController.m */,
-				CEE6A97F1850085100B7B177 /* ICM_FadeTransition.m */,
-				CEE6A9801850085100B7B177 /* ICM_GITTEST.m */,
-				CEE6A9811850085100B7B177 /* ICM_MapViewController.m */,
-				CEE6A9821850085100B7B177 /* ICM_Model.m */,
-				CEE6A9831850085100B7B177 /* ICM_NavControllerDelegate.m */,
-				CEE6A9841850085100B7B177 /* ICM_NavigationViewController.m */,
-				CEE6A9851850085100B7B177 /* ICM_Node.m */,
-				CEE6A9861850085100B7B177 /* ICM_Pano1ViewController.m */,
-				CEE6A9871850085100B7B177 /* ICM_Pano2ViewController.m */,
-				CEE6A9881850085100B7B177 /* ICM_PanoAboutUsViewController.m */,
-				CEE6A9891850085100B7B177 /* ICM_RouteMapViewController.m */,
-				CEE6A98A1850085100B7B177 /* ICM_Segue_FadeIn.m */,
-				CEE6A98B1850085100B7B177 /* ICM_Segue_RightToLeft.m */,
-				CEE6A98C1850085100B7B177 /* ICM_SelectionTypeViewController.m */,
-				CEE6A98D1850085100B7B177 /* ICM_SettingsViewController.m */,
-				CEE6A98E1850085100B7B177 /* ICM_StartingRoomViewController.m */,
-				CEE6A98F1850085100B7B177 /* ICM_StartingViewController.m */,
-				CEE6A97B1850080D00B7B177 /* JAPanoView.h */,
-				CEE6A9671850080100B7B177 /* ICM_DirectionsViewController.h */,
-				CEE6A9681850080100B7B177 /* ICM_EndingRoomViewController.h */,
-				CEE6A9691850080100B7B177 /* ICM_EndingViewController.h */,
-				CEE6A96A1850080100B7B177 /* ICM_FadeTransition.h */,
-				CEE6A96B1850080100B7B177 /* ICM_GITTEST.h */,
-				CEE6A96C1850080100B7B177 /* ICM_MapViewController.h */,
-				CEE6A96D1850080100B7B177 /* ICM_Model.h */,
-				CEE6A96E1850080100B7B177 /* ICM_NavControllerDelegate.h */,
-				CEE6A96F1850080100B7B177 /* ICM_NavigationViewController.h */,
-				CEE6A9701850080100B7B177 /* ICM_Node.h */,
-				CEE6A9711850080100B7B177 /* ICM_Pano1ViewController.h */,
-				CEE6A9721850080100B7B177 /* ICM_Pano2ViewController.h */,
-				CEE6A9731850080100B7B177 /* ICM_PanoAboutUsViewController.h */,
-				CEE6A9741850080100B7B177 /* ICM_RouteMapViewController.h */,
-				CEE6A9751850080100B7B177 /* ICM_Segue_FadeIn.h */,
-				CEE6A9761850080100B7B177 /* ICM_Segue_RightToLeft.h */,
-				CEE6A9771850080100B7B177 /* ICM_SelectionTypeViewController.h */,
-				CEE6A9781850080100B7B177 /* ICM_SettingsViewController.h */,
-				CEE6A9791850080100B7B177 /* ICM_StartingRoomViewController.h */,
-				CEE6A97A1850080100B7B177 /* ICM_StartingViewController.h */,
 				CEE6A7FF1850066700B7B177 /* ICM_AppDelegate.h */,
 				CEE6A8001850066700B7B177 /* ICM_AppDelegate.m */,
-				CEE6A8021850066700B7B177 /* Main.storyboard */,
+				CEE6A9671850080100B7B177 /* ICM_DirectionsViewController.h */,
+				CEE6A97C1850085100B7B177 /* ICM_DirectionsViewController.m */,
+				CEE6A9681850080100B7B177 /* ICM_EndingRoomViewController.h */,
+				CEE6A97D1850085100B7B177 /* ICM_EndingRoomViewController.m */,
+				CEE6A9691850080100B7B177 /* ICM_EndingViewController.h */,
+				CEE6A97E1850085100B7B177 /* ICM_EndingViewController.m */,
+				CEE6A96A1850080100B7B177 /* ICM_FadeTransition.h */,
+				CEE6A97F1850085100B7B177 /* ICM_FadeTransition.m */,
+				CEE6A96B1850080100B7B177 /* ICM_GITTEST.h */,
+				CEE6A9801850085100B7B177 /* ICM_GITTEST.m */,
+				CEE6A96C1850080100B7B177 /* ICM_MapViewController.h */,
+				CEE6A9811850085100B7B177 /* ICM_MapViewController.m */,
+				CEE6A96D1850080100B7B177 /* ICM_Model.h */,
+				CEE6A9821850085100B7B177 /* ICM_Model.m */,
+				CEE6A96E1850080100B7B177 /* ICM_NavControllerDelegate.h */,
+				CEE6A9831850085100B7B177 /* ICM_NavControllerDelegate.m */,
+				CEE6A96F1850080100B7B177 /* ICM_NavigationViewController.h */,
+				CEE6A9841850085100B7B177 /* ICM_NavigationViewController.m */,
+				CEE6A9701850080100B7B177 /* ICM_Node.h */,
+				CEE6A9851850085100B7B177 /* ICM_Node.m */,
+				CEE6A9711850080100B7B177 /* ICM_Pano1ViewController.h */,
+				CEE6A9861850085100B7B177 /* ICM_Pano1ViewController.m */,
+				CEE6A9731850080100B7B177 /* ICM_PanoAboutUsViewController.h */,
+				CEE6A9881850085100B7B177 /* ICM_PanoAboutUsViewController.m */,
+				CEE6A9741850080100B7B177 /* ICM_RouteMapViewController.h */,
+				CEE6A9891850085100B7B177 /* ICM_RouteMapViewController.m */,
+				CEE6A9751850080100B7B177 /* ICM_Segue_FadeIn.h */,
+				CEE6A98A1850085100B7B177 /* ICM_Segue_FadeIn.m */,
+				CEE6A9761850080100B7B177 /* ICM_Segue_RightToLeft.h */,
+				CEE6A98B1850085100B7B177 /* ICM_Segue_RightToLeft.m */,
+				CEE6A9771850080100B7B177 /* ICM_SelectionTypeViewController.h */,
+				CEE6A98C1850085100B7B177 /* ICM_SelectionTypeViewController.m */,
+				CEE6A9781850080100B7B177 /* ICM_SettingsViewController.h */,
+				CEE6A98D1850085100B7B177 /* ICM_SettingsViewController.m */,
+				CEE6A9791850080100B7B177 /* ICM_StartingRoomViewController.h */,
+				CEE6A98E1850085100B7B177 /* ICM_StartingRoomViewController.m */,
+				CEE6A97A1850080100B7B177 /* ICM_StartingViewController.h */,
+				CEE6A98F1850085100B7B177 /* ICM_StartingViewController.m */,
 				CEE6A8051850066700B7B177 /* ICM_ViewController.h */,
 				CEE6A8061850066700B7B177 /* ICM_ViewController.m */,
 				CEE6A8081850066700B7B177 /* Images.xcassets */,
+				CEE6A97B1850080D00B7B177 /* JAPanoView.h */,
+				CEE6A9A41850085B00B7B177 /* JAPanoView.m */,
+				CEE6A8021850066700B7B177 /* Main.storyboard */,
 				CEE6A7F71850066700B7B177 /* Supporting Files */,
 			);
 			path = test1;
@@ -612,6 +609,7 @@
 		CEE6A7F71850066700B7B177 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE9D1A8D1865634300819B65 /* Splash screen 640x960.png */,
 				CEC134411853B3E300E2D4CD /* back1.png */,
 				CEC1343F1853B29300E2D4CD /* next.png */,
 				CEE6A92F1850074700B7B177 /* apple-touch-icon-80x80-precomposed.png */,
@@ -1022,6 +1020,7 @@
 				CEC134401853B29300E2D4CD /* next.png in Resources */,
 				CEE6A8EB1850070A00B7B177 /* IMG_0721.left.jpg in Resources */,
 				CEE6A9221850070A00B7B177 /* IMG_0750.right.jpg in Resources */,
+				CE9D1A8E1865634300819B65 /* Splash screen 640x960.png in Resources */,
 				CEE6A8AA1850070A00B7B177 /* Black map.jpg in Resources */,
 				CEE6A9001850070A00B7B177 /* IMG_0732.back.jpg in Resources */,
 				CEE6A9C518500B8000B7B177 /* GoogleMaps.bundle in Resources */,
@@ -1084,7 +1083,6 @@
 				CEE6A7FD1850066700B7B177 /* main.m in Sources */,
 				CEE6A9981850085100B7B177 /* ICM_NavigationViewController.m in Sources */,
 				CEE6A9961850085100B7B177 /* ICM_Model.m in Sources */,
-				CEE6A99B1850085100B7B177 /* ICM_Pano2ViewController.m in Sources */,
 				CEE6A9951850085100B7B177 /* ICM_MapViewController.m in Sources */,
 				CEE6A9921850085100B7B177 /* ICM_EndingViewController.m in Sources */,
 			);
